@@ -20,8 +20,8 @@ public class Calculate {
 	*Метод точки входа в программу
 	*@since added 02/02/2019
 	*/
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		System.out.println("Hello, World!");
 	}
 	
-} 
+}
