@@ -1,4 +1,5 @@
 package ru.job4j.calculator;
+
 /**
  * Package for calculate task.
  *
@@ -8,33 +9,38 @@ package ru.job4j.calculator;
  */
 public class Calculator {
     /**
-    * переменная в которую методы записывают выполненные результаты
+     * переменная в которую методы записывают выполненные результаты
      */
     private double result;
+
     /**
      * метод для сложения двух чисел с плавающей точкой
      */
     public void add(double first, double second) {
         this.result = first + second;
     }
+
     /**
      * метод для вычитания двух чисел с плавающей точкой
      */
     public void subtract(double first, double second) {
         this.result = first - second;
     }
+
     /**
      * метод для деления двух чисел с плавающей точкой
      */
     public void div(double first, double second) {
         this.result = first / second;
     }
+
     /**
      * метод для умножения двух чисел с плавающей точкой
      */
     public void multiply(double first, double second) {
         this.result = first * second;
     }
+
     /**
      * метод возвращающий результат из переменной result
      */
