@@ -40,6 +40,7 @@ public class Triangle {
         }
         return rsl;
     }
+
     /**
      * Метод проверяет, можно ли построить треугольник с такими длинами сторон.
      * <p>
@@ -51,6 +52,6 @@ public class Triangle {
      * @return false if period<=0
      */
     private boolean exist(double ab, double ac, double bc) {
-        return period(ab,ac,bc)>0;
+        return period(ab, ac, bc) > 0;
     }
 }
