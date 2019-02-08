@@ -52,7 +52,7 @@ public class Triangle {
      * @return false if period<=0
      */
     private boolean exist(double ab, double ac, double bc) {
-        return ab + ac > bc && ab + bc > ac && ac + bc > ab;
+        return period(ab,ac,bc)<=0 && ab + ac > bc && ab + bc > ac && ac + bc > ab;
     }
 
 }
