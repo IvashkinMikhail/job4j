@@ -24,4 +24,20 @@ public class TurnTest {
         int[] expect = new int[]{3, 2, 6, 1, 4};
         assertThat(result, is(expect));
     }
+    @Test
+    public void whenTurnArrayWith2ElementsThenTurnedArray() {
+        Turn turner = new Turn();
+        int[] input = new int[]{4, 1};
+        int[] result = turner.back(input);
+        int[] expect = new int[]{1, 4};
+        assertThat(result, is(expect));
+    }
+    @Test
+    public void whenTurnArrayWith1fElementsThenTurnedArray() {
+        Turn turner = new Turn();
+        int[] input = new int[]{4};
+        int[] result = turner.back(input);
+        int[] expect = new int[]{4};
+        assertThat(result, is(expect));
+    }
 }
