@@ -4,16 +4,16 @@ import java.util.Arrays;
 
 public class ArrayDuplicate {
     public String[] remove(String[] array) {
-        int al = array.length;
-        for (int k = 0; k < al; k++) {
-            for (int i = k + 1; i < al; i++) {
-                if (array[k].equals(array[i])) {
-                    array[i] = array[al - 1];
-                    al--;
-                    i--;
+        int arrlength = array.length;
+        for (int out = 0; out < arrlength; out++) {
+            for (int in = out + 1; in < arrlength; in++) {
+                if (array[out].equals(array[in])) {
+                    array[in] = array[arrlength - 1];
+                    arrlength--;
+                    in--;
                 }
             }
         }
-        return Arrays.copyOf(array, al);
+        return Arrays.copyOf(array, arrlength);
     }
 }
