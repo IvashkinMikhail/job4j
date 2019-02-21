@@ -1,7 +1,7 @@
 package ru.job4j.proffesion;
 
 public class Doctor extends Profession {
-    String profession = "Doctor";
+    private String profession = "Doctor";
     private Object Diagnose;
 
 

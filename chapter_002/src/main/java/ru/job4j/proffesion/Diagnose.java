@@ -2,7 +2,7 @@ package ru.job4j.proffesion;
 
 public class Diagnose {
 
-    Pacient pacient;
+    private Pacient pacient;
 
     public Diagnose(Pacient pacient) {
         this.pacient = pacient;
