@@ -72,10 +72,10 @@ public class Logic {
         int arrayl = table.length;
         int ccount;
         int ccount2;
-        for (int out = 0; out < arrayl - 1; out++) {
+        for (int out = 0; out < arrayl; out++) {
             ccount = 0;
             ccount2 = 0;
-            for (int in = 0; in < arrayl - 1; in++) {
+            for (int in = 0; in < arrayl; in++) {
                 if (table[in][out] == 1) {
                     ccount++;
                 }
@@ -84,7 +84,7 @@ public class Logic {
                     ccount2++;
                 }
             }
-            if (ccount == arrayl - 1 || ccount2 == arrayl - 1) {
+            if (ccount == arrayl || ccount2 == arrayl) {
                 result = true;
                 break;
             }
