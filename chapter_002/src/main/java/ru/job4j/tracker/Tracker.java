@@ -1,6 +1,7 @@
 package ru.job4j.tracker;
 
 import java.time.LocalDateTime;
+import java.util.Arrays;
 
 /**
  * @author Misha Ivashkin
@@ -38,6 +39,7 @@ public class Tracker {
         boolean retvar = false;
         for (int i = 0; i < position; i++) {
             if (this.items[i].getId().equals(id)) {
+                item.setId(this.items[i].getId());
                 this.items[i] = item;
                 retvar = true;
                 break;
@@ -67,9 +69,7 @@ public class Tracker {
      * Метод возвращает копию массива без null элементов
      */
     public Item[] findAll() {
-        Item[] arrayWoNull = new Item[position];
-        System.arraycopy(this.items, 0, arrayWoNull, 0, position);
-        return arrayWoNull;
+        return Arrays.copyOf(this.items, position);
     }
 
     /**
