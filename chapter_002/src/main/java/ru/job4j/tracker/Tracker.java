@@ -59,6 +59,7 @@ public class Tracker {
             if (this.items[i].getId().equals(id)) {
                 System.arraycopy(this.items, i + 1, this.items, i, this.items.length - i - 1);
                 retvar = true;
+                position--;
                 break;
             }
         }
@@ -80,7 +81,11 @@ public class Tracker {
      */
     public Item[] findByName(String key) {
         int ccount = 0;
-        Item[] arrayNeedName = new Item[position];
+        int j = 0;
+        if (position == 0) {
+            j++;
+        }
+        Item[] arrayNeedName = new Item[position + j];
         for (int i = 0; i < position; i++) {
             if (this.items[i].getName().equals(key)) {
                 arrayNeedName[ccount] = this.items[i];
