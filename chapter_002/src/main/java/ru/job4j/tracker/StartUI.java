@@ -10,11 +10,11 @@ public class StartUI {
      */
     private static final String ADD = "0";
 
-    private static final String FndItemByname = "5";
-    private static final String FndItemByID = "4";
-    private static final String DelItem = "3";
-    private static final String EditItem = "2";
-    private static final String ShowAllItems = "1";
+    private static final String FNDITEMBYNAME = "5";
+    private static final String FNDITEMBYID = "4";
+    private static final String DELITEM = "3";
+    private static final String EDITITEM = "2";
+    private static final String SHOWALLITEMS = "1";
 
     /**
      * Константа для выхода из цикла.
@@ -51,17 +51,17 @@ public class StartUI {
             String answer = this.input.ask("Введите пункт меню : ");
             if (ADD.equals(answer)) {
                 this.createItem();
-            } else if (ShowAllItems.equals(answer)) {
+            } else if (SHOWALLITEMS.equals(answer)) {
                 for (Item i : tracker.findAll()) {
                     System.out.println(i.getId() + " " + i.getName());
                 }
-            } else if (EditItem.equals(answer)) {
+            } else if (EDITITEM.equals(answer)) {
                 this.replaceItem();
-            } else if (DelItem.equals(answer)) {
+            } else if (DELITEM.equals(answer)) {
                 this.delItem();
-            } else if (FndItemByID.equals(answer)) {
+            } else if (FNDITEMBYID.equals(answer)) {
                 this.findItemById();
-            } else if (FndItemByname.equals(answer)) {
+            } else if (FNDITEMBYNAME.equals(answer)) {
                 this.findItemByName();
             } else if (EXIT.equals(answer)) {
                 exit = true;
